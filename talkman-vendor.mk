@@ -31,17 +31,19 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/bin/location-mq:$(TARGET_COPY_OUT_VENDOR)/bin/location-mq \
     vendor/msft/talkman/proprietary/bin/lowi-server:$(TARGET_COPY_OUT_VENDOR)/bin/lowi-server \
     vendor/msft/talkman/proprietary/bin/msm_irqbalance:$(TARGET_COPY_OUT_VENDOR)/bin/msm_irqbalance \
+    vendor/msft/talkman/proprietary/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
+    vendor/msft/talkman/proprietary/etc/thermal-engine-8992.conf:system/etc/thermal-engine-8992.conf \
+    vendor/msft/talkman/proprietary/vendor/lib/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalclient.so \
+    vendor/msft/talkman/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
+    vendor/msft/talkman/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
     vendor/msft/talkman/proprietary/bin/netmgrd:$(TARGET_COPY_OUT_VENDOR)/bin/netmgrd \
     vendor/msft/talkman/proprietary/bin/nl_listener:$(TARGET_COPY_OUT_VENDOR)/bin/nl_listener \
-    vendor/msft/talkman/proprietary/bin/perfd:$(TARGET_COPY_OUT_VENDOR)/bin/perfd \
     vendor/msft/talkman/proprietary/bin/pm-proxy:$(TARGET_COPY_OUT_VENDOR)/bin/pm-proxy \
     vendor/msft/talkman/proprietary/bin/pm-service:$(TARGET_COPY_OUT_VENDOR)/bin/pm-service \
-    vendor/msft/talkman/proprietary/bin/port-bridge:$(TARGET_COPY_OUT_VENDOR)/bin/port-bridge \
     vendor/msft/talkman/proprietary/bin/qmakernote-xtract:$(TARGET_COPY_OUT_VENDOR)/bin/qmakernote-xtract \
     vendor/msft/talkman/proprietary/bin/qmuxd:$(TARGET_COPY_OUT_VENDOR)/bin/qmuxd \
     vendor/msft/talkman/proprietary/bin/rmt_storage:$(TARGET_COPY_OUT_VENDOR)/bin/rmt_storage \
     vendor/msft/talkman/proprietary/bin/subsystem_ramdump:$(TARGET_COPY_OUT_VENDOR)/bin/subsystem_ramdump \
-    vendor/msft/talkman/proprietary/bin/thermal-engine:$(TARGET_COPY_OUT_VENDOR)/bin/thermal-engine \
     vendor/msft/talkman/proprietary/etc/acdbdata/Bluetooth_cal.acdb:system/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/msft/talkman/proprietary/etc/acdbdata/General_cal.acdb:system/etc/acdbdata/General_cal.acdb \
     vendor/msft/talkman/proprietary/etc/acdbdata/Global_cal.acdb:system/etc/acdbdata/Global_cal.acdb \
@@ -49,6 +51,8 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/etc/acdbdata/Hdmi_cal.acdb:system/etc/acdbdata/Hdmi_cal.acdb \
     vendor/msft/talkman/proprietary/etc/acdbdata/Headset_cal.acdb:system/etc/acdbdata/Headset_cal.acdb \
     vendor/msft/talkman/proprietary/etc/acdbdata/Speaker_cal.acdb:system/etc/acdbdata/Speaker_cal.acdb \
+        $(LOCAL_PATH)/proprietary/product/lib64/libaptX_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptX_encoder.so \
+    $(LOCAL_PATH)/proprietary/product/lib64/libaptXHD_encoder.so:$(TARGET_COPY_OUT_PRODUCT)/lib64/libaptXHD_encoder.so \
     vendor/msft/talkman/proprietary/etc/cne/profile.txt:system/etc/cne/profile.txt \
     vendor/msft/talkman/proprietary/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
     vendor/msft/talkman/proprietary/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
@@ -69,13 +73,10 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/etc/sap.conf:system/etc/sap.conf \
     vendor/msft/talkman/proprietary/etc/sysconfig/talkman_common.xml:system/etc/sysconfig/talkman_common.xml \
     vendor/msft/talkman/proprietary/etc/sysconfig/whitelist_com.android.omadm.service.xml:system/etc/sysconfig/whitelist_com.android.omadm.service.xml \
-    vendor/msft/talkman/proprietary/etc/thermal-engine-8992.conf:system/etc/thermal-engine-8992.conf \
     vendor/msft/talkman/proprietary/lib/libdmengine.so:system/lib/libdmengine.so \
     vendor/msft/talkman/proprietary/lib/libdmjavaplugin.so:system/lib/libdmjavaplugin.so \
     vendor/msft/talkman/proprietary/lib/libloc_api_v02.so:system/lib/libloc_api_v02.so \
     vendor/msft/talkman/proprietary/lib/libloc_ds_api.so:system/lib/libloc_ds_api.so \
-    vendor/msft/talkman/proprietary/lib64/libaptX_encoder.so:system/lib64/libaptX_encoder.so \
-    vendor/msft/talkman/proprietary/lib64/libaptXHD_encoder.so:system/lib64/libaptXHD_encoder.so \
     vendor/msft/talkman/proprietary/lib64/libloc_api_v02.so:system/lib64/libloc_api_v02.so \
     vendor/msft/talkman/proprietary/lib64/libloc_ds_api.so:system/lib64/libloc_ds_api.so
 #   vendor/msft/talkman/proprietary/vendor/bin/sensors.qcom:$(TARGET_COPY_OUT_VENDOR)/bin/sensors.qcom \
@@ -373,7 +374,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/vendor/lib/libqomx_jpegdec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegdec.so \
     vendor/msft/talkman/proprietary/vendor/lib/libqomx_jpegenc.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc.so \
     vendor/msft/talkman/proprietary/vendor/lib/libqomx_jpegenc_pipe.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqomx_jpegenc_pipe.so \
-    vendor/msft/talkman/proprietary/vendor/lib/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib/libqti-perfd-client.so \
     vendor/msft/talkman/proprietary/vendor/lib/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib/libril-qcril-hook-oem.so \
     vendor/msft/talkman/proprietary/vendor/lib/librpmb.so:$(TARGET_COPY_OUT_VENDOR)/lib/librpmb.so \
     vendor/msft/talkman/proprietary/vendor/lib/librs.rnr_downscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/librs.rnr_downscale.so \
@@ -383,7 +383,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/vendor/lib/libscale.so:$(TARGET_COPY_OUT_VENDOR)/lib/libscale.so \
     vendor/msft/talkman/proprietary/vendor/lib/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib/libsmemlog.so \
     vendor/msft/talkman/proprietary/vendor/lib/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib/libssd.so \
-    vendor/msft/talkman/proprietary/vendor/lib/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalclient.so \
     vendor/msft/talkman/proprietary/vendor/lib/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib/libthermalioctl.so \
     vendor/msft/talkman/proprietary/vendor/lib/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib/libtzdrmgenprov.so \
     vendor/msft/talkman/proprietary/vendor/lib/libvcel.so:$(TARGET_COPY_OUT_VENDOR)/lib/libvcel.so \
@@ -481,7 +480,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/vendor/lib64/libqmi_csi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_csi.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libqmi_encdec.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_encdec.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
-    vendor/msft/talkman/proprietary/vendor/lib64/libqti-perfd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-perfd-client.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libquipc_os_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libquipc_os_api.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libril-qc-qmi-1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qc-qmi-1.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libril-qcril-hook-oem.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libril-qcril-hook-oem.so \
@@ -492,8 +490,6 @@ PRODUCT_COPY_FILES += \
     vendor/msft/talkman/proprietary/vendor/lib64/libsmemlog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsmemlog.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libssd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libssd.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libsystem_health_mon.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsystem_health_mon.so \
-    vendor/msft/talkman/proprietary/vendor/lib64/libthermalclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalclient.so \
-    vendor/msft/talkman/proprietary/vendor/lib64/libthermalioctl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libthermalioctl.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libtzdrmgenprov.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libtzdrmgenprov.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libvcel.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvcel.so \
     vendor/msft/talkman/proprietary/vendor/lib64/libvoice-svc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvoice-svc.so \
